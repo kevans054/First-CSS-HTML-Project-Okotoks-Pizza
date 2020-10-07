@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"uri": "vscode-remote://ssh-remote+kjevans-development.tk/var/www"
+		},
+		{
+			"uri": "vscode-remote://ssh-remote+kjevans-development.tk/var"
+		}
+	],
+	"remoteAuthority": "ssh-remote+kjevans-development.tk",
+	"settings": {}
+}
