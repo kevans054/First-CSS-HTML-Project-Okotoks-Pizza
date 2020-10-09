@@ -15,54 +15,57 @@ h1 {
     font-family: 'TimesNewRoman', cursive;
     text-align: center;
     }
-#links{
+
+#Menulink{
+    bu
+        display: inline;
+        border-color: black;
+        background-color: #024b4b;
         color: #008B8B;
         font-family: 'TimesNewRoman', cursive;
+        margin: 10;
+        padding: 6;
     }
     
+#Locationlink
+{
+    display: inline;
+    border-color: black;
+    background-color:  #024b4b;
+    color: #008B8B;
+    font-family: 'TimesNewRoman', cursive;
+}
+
+   
+#Yelplink
+{
+    display: inline;
+    border-color: black;
+    border-style: outset;
+    background-color:  #024b4b;
+    color: #008B8B;
+    font-family: 'TimesNewRoman', cursive;
+}
 a   {
         color: #008B8B;
         font-family: 'TimesNewRoman', cursive;
     }
-
+#video-container {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        font-size: ;
+    } 
+#About-Us
+{  
+    text-align: center;
+    color: #008B8B;
+    font-family: 'TimesNewRoman', cursive;
+}
 footer
     {
+        text-align: center;
         color: #008B8B;
         font-family: 'TimesNewRoman', cursive;
         size: 0ch;
     }
-/*#Menulink-container{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    text-emphasis-color: #008B8B;
-    font-family: 'TimesNewRoman', cursive;
-    font-size: medium;
-      
-}
-#Contact-ContactUslink-container{
-    display: inline-block;
-    align-items: center;
-    justify-items: center;
-    color: #008B8B;
-    font-family: 'TimesNewRoman', cursive;
-    font-size: medium;
-    text-align: center;    
-}
-
-#review-container {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    font-size: ;
-}
-
-#video-container {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    font-size: ;
-}*/
