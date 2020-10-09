@@ -1,13 +1,13 @@
-/*  Assignment W4A Okoktoks Pizza Homepage Style Sheet
-    Created October 6, 2020
+/*  Assignment W4B Okoktoks Pizza Homepage Style Sheet
+    Modified October 6, 2020
     By Karen Evans
 */
 html {
     margin: 0;
     padding: 0;
     background: #2E0854;
+    color: #008B8B;
     font-family: 'TimesNewRoman', cursive;
-    color:  #008B8B;
 }
 
 h1 {
@@ -15,8 +15,23 @@ h1 {
     font-family: 'TimesNewRoman', cursive;
     text-align: center;
     }
+#links{
+        color: #008B8B;
+        font-family: 'TimesNewRoman', cursive;
+    }
+    
+a   {
+        color: #008B8B;
+        font-family: 'TimesNewRoman', cursive;
+    }
 
-#Menulink-container{
+footer
+    {
+        color: #008B8B;
+        font-family: 'TimesNewRoman', cursive;
+        size: 0ch;
+    }
+/*#Menulink-container{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
@@ -28,6 +43,8 @@ h1 {
 }
 #Contact-ContactUslink-container{
     display: inline-block;
+    align-items: center;
+    justify-items: center;
     color: #008B8B;
     font-family: 'TimesNewRoman', cursive;
     font-size: medium;
@@ -48,4 +65,4 @@ h1 {
     align-items: center;
     justify-items: center;
     font-size: ;
-}
+}*/
