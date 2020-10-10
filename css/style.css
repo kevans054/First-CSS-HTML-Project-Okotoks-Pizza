@@ -2,70 +2,78 @@
     Modified October 6, 2020
     By Karen Evans
 */
-html {
-    margin: 0;
-    padding: 0;
-    background: #2E0854;
-    color: #008B8B;
-    font-family: 'TimesNewRoman', cursive;
-}
-
-h1 {
-    color: #008B8B;
-    font-family: 'TimesNewRoman', cursive;
-    text-align: center;
+html 
+    {
+        margin: 0;
+        padding: 0;
+        background: #2b6851;
+        color: #000808;
+        font-family: 'TimesNewRoman', cursive;
     }
 
-#Menulink{
-    bu
+h1 
+    {
+        background: #2b6851;
+        color: #000808;
+        font-family: 'TimesNewRoman', cursive;
+        text-align: center;
+    }
+
+ul
+    {
+        list-style-type: none; /*Removes the bullets from the nav bar*/
+        margin: 0; /*setting to 0 removes browser default settings*/
+        padding: 0;
+        overflow: hidden; /*added to prevent elements from going outside of the list*/
+        background-color: #89d4b7;
+    }
+
+    li
+    {
+        float: left;
+        padding: 60px;
+    }
+
+li a 
+    {
+        display: block; /*By default, <li> elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line */
+        color:  #89d4b7;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+  }
+
+/*
+.container
+    {
         display: inline;
-        border-color: black;
-        background-color: #024b4b;
-        color: #008B8B;
-        font-family: 'TimesNewRoman', cursive;
-        margin: 10;
-        padding: 6;
+        padding-left: 500px;
+        text-align: center;
+       
+    }*/
+iframe
+    {
+        display: inline;
+        padding-left: 400px;
     }
-    
-#Locationlink
-{
-    display: inline;
-    border-color: black;
-    background-color:  #024b4b;
-    color: #008B8B;
-    font-family: 'TimesNewRoman', cursive;
-}
+main
+    {  
+        text-align: left;
+        text-justify: auto;
+        color: black;
+        font-family: 'TimesNewRoman', cursive;
+        margin: 10px;
+        background-color: #89d4b7;
+    }
 
-   
-#Yelplink
-{
-    display: inline;
-    border-color: black;
-    border-style: outset;
-    background-color:  #024b4b;
-    color: #008B8B;
-    font-family: 'TimesNewRoman', cursive;
-}
-a   {
-        color: #008B8B;
-        font-family: 'TimesNewRoman', cursive;
-    }
-#video-container {
-        display: grid;
-        align-items: center;
-        justify-items: center;
-        font-size: ;
-    } 
-#About-Us
-{  
-    text-align: center;
-    color: #008B8B;
-    font-family: 'TimesNewRoman', cursive;
-}
 footer
     {
         text-align: center;
-        color: #008B8B;
+        color: black;
         font-family: 'TimesNewRoman', cursive;
-        size: 0ch;
+        size: 3px;
     }
