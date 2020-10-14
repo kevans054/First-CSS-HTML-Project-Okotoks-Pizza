@@ -18,17 +18,20 @@ h1
         font-family: 'TimesNewRoman', cursive;
         text-align: center;
     }
-
+nav 
+    {
+        background-color: darkred;
+    }
 ul
     {
         list-style-type: none; /*Removes the bullets from the nav bar*/
         margin: 0; /*setting to 0 removes browser default settings*/
         padding: 0;
         overflow: hidden; /*added to prevent elements from going outside of the list*/
-        background-color: #89d4b7;
+       
     }
 
-    li
+li
     {
         float: left;
         padding: 60px;
@@ -37,29 +40,33 @@ ul
 li a 
     {
         display: block; /*By default, <li> elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line */
-        color:  #89d4b7;
+        color: #89d4b7;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
     }
+
 /* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: #111;
   }
 
-/*
-.container
-    {
-        display: inline;
-        padding-left: 500px;
-        text-align: center;
-       
-    }*/
-iframe
-    {
-        display: inline;
-        padding-left: 400px;
-    }
+  /* unvisited link */
+a:link 
+{
+    color: #FF0000;
+}
+  
+  /* visited link */
+  a:visited 
+{
+    color: #00FF00;
+}
+
+a:active
+{
+    font-weight: bold;
+}
 main
     {  
         text-align: left;
@@ -67,13 +74,46 @@ main
         color: black;
         font-family: 'TimesNewRoman', cursive;
         margin: 10px;
-        background-color: #89d4b7;
+        
     }
-
+    main > p
+    {
+        text-indent: 10px;
+    }
+    
+    .container
+    {
+        border-style: inset;
+        background-color: darkred;
+        border-color: rgb(3, 3, 3);
+        text-align: center;
+        padding-bottom: 40px;
+       
+    }
+   
+    .mapcontainer
+    {
+        border-style: inset;
+        background-color: #2b6851;
+        border-color: rgb(3, 3, 3);
+        text-align: center;
+        padding-bottom: 40px;
+       
+    }
+    iframe
+    {
+        display: inline;
+    }
+     div + p
+    {
+        background-color: greenyellow;
+        text-align: center;
+    }
 footer
     {
         text-align: center;
         color: black;
         font-family: 'TimesNewRoman', cursive;
         size: 3px;
+        
     }
