@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <!--Assignment W4B Okoktoks Pizza Homepage Index file
 #    Created October 8, 2020
 #    By Karen Evans -->
-<!DOCTYPE html>
+
+<html>
 <head>
     <head>
         <link rel="shortcut icon" href="images/PizzaSlice.png">
@@ -16,54 +18,73 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
 </head>
-<Body>
-    <header>
-        <h1>Pizza, Pasta, Salads Menu!</h1>
-    </header>   
+<body>
+    <div class="grid-wrapper">
+        <header>
+            <img src="images/red-clock-and-pizza.png">
+            <h1>Okotoks Pizza</h1>
+            <h2>Pizza, Pasta, Salads Menu!</h2>
+            <nav>
+                <ul>
+                <li onmouseover="Home"> 
+                    <a href="index.html">Home
+                    </a>
+                </li>
+                <li onmouseover="Menu"> 
+                    <a href="Menu.html">Menu
+                    </a>
+                </li>
+                <li onmouseover="ContactUs">
+                    <a href="LocationContactUs.html">Location
+                    </a>
+                </li>
+                <li onmouseover="Reviews">
+                    <a href="YelpReview.html">Our reviews
+                    </a>
+                </li>    
+                </ul>
+            </nav>
+        </header>   
     
-    <nav>
-        <ul>
-            <li onmouseover="Menu"> 
-                <a href="Menu.html">See our Menu!</a>
-                <a href="Menu.html" title="Menu"><img src="images/ingredients_1.jpg" alt="Click here to view our menu">
-                </a>
-            </li>
-            <li onmouseover="ContactUs">
-                <a href="LocationContactUs.html">Join us for dinner!</a>
-                <a href="LocationContactUs.html" title="Location"><img src="Images/pizzaParlorFront.jpg" alt="Click here to get our location">
-                </a>
-            </li>
-            <li onmouseover="Reviews">
-                <a href="YelpReview.html">See what our customers say about us!</a>
-                <a href="YelpReview.html" title="Reviews"><img src="Images/Yelp.png" alt="Click here to see our reviews">
-                </a>
-            </li>    
-        </ul>
-    </nav>
-    <div>
+    <div class="food-menu">
         <h2>Okotoks Pizza Menu</h2>
         <div class="dropdown">
             <button class="dropbtn">Menu</button>
             <ul class="dropdown-content">
-                <li class="dropdown2">Pizza
-                    <ul class="dropdown-content2">
-                        <li>Cheese</li>
-                        <li>Pepperoni</li>
-                        <li>Hawaiian</li>
+                <li>Pizza
+                    <ul>
+                        <li>
+                            <a href="#">Cheese</a>
+                        </li>
+                        <li>
+                            <a href="#">Pepperoni</a>
+                        </li>
+                        <li>
+                            <a href="#">Hawaiian</a>
+                        </li>
                     </ul>
                 </li>
-                <li class="dropdown2">Pasta
-                    <ul class="dropdown-content2">
-                        <li>Ravioli</li>
-                        <li>Macaroni</li>
-                        <li>Spaghetti</li>
+                <li>Pasta
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="#">Raviolli</a>
+                        </li>
+                        <li>
+                            <a href="#">Macaroni</a>
+                        </li>
+                        <li>
+                            <a href="#">Spaghetti</a>
+                        </li>
                     </ul>
                 </li>
-                <li class="dropdown2">Salads
-                    <ul class="dropdown-content2">
-                        <li>Ceasar</li>
-                        <li>Garden</li>
-                        <li>House</li>
+                <li>Salads
+                    <ul class="dropdown-content">
+                        <li><a href="#">Caesar</a>
+                        </li>
+                        <li><a href="#">Garden</a>
+                        </li>
+                        <li><a href="#">House</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -75,7 +96,9 @@
         </div>
     <footer>
         <a href="mailto:info@okotokspizza.ca">email:info@okotokspizza.ca</a>
-        <a href="phone:(403)555-5555">Phone:(403)555-5555</a></p>
+        <a href="phone:(403)555-5555">Phone:(403)555-5555</a>
       </footer>
-</Body>
+    </div>
+</body>
+</html>
     
