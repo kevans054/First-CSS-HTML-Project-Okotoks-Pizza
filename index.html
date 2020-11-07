@@ -12,43 +12,54 @@
     <meta name="author" content="Doug Cleveland">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
     <meta property="twitter:title" content="Okotoks Pizza">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
    <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="top">
     <div class="grid-wrapper">
-        <header>
-            <img src="images/red-clock-and-pizza.png">
-            <h1>Okotoks Pizza</h1>
-                <h2>Pasta & Salads!</h2>
-                <nav>
+        <div class="header-grid">
+            <div class="area-1">            
+                <img src="images/okotoks-pizza-logo_s.png" class="logo" alt="Okotoks-Pizza logo">
+                <!-- <p>Okotokos</p> -->
+            </div> 
+                    
+            <div class="area-2">
+                <h1>Okotoks Pizza Pasta & Salads!</h1>
+            </div> 
+            <div class="area-3">
+                <div class="navbar">
                     <ul>
-                    <li onmouseover="Home"> 
-                        <a href="index.html">Home
-                        </a>
-                    </li>
-                    <li onmouseover="Menu"> 
-                        <a href="Menu.html">Menu
-                        </a>
-                    </li>
-                    <li onmouseover="ContactUs">
-                        <a href="LocationContactUs.html">Location
-                        </a>
-                    </li>
-                    <li onmouseover="Reviews">
-                        <a href="YelpReview.html">Our reviews
-                        </a>
-                    </li>    
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <div id="promobar">
-                <h3>Promotional Information Bar</h3>
+                        <li onmouseover="Home"> 
+                            <a href="index.html">Home
+                            </a>
+                        </li>
+                        <li onmouseover="Menu"> 
+                            <a href="Menu.html">Menu
+                            </a>
+                        </li>
+                        <li onmouseover="ContactUs">
+                            <a href="LocationContactUs.html">Location
+                            </a>
+                        </li>
+                        <li onmouseover="Reviews">
+                            <a href="YelpReview.html">Our reviews
+                            </a>
+                        </li>    
+                    </ul>
+                </div>
             </div>
-            <section id="aboutus">
-                <h2>Who we are</h2>
+            <div class="promobar">
+                        <h2>Hot Deals!!!</h2>
+                        <p>Buy one get one free!</p>
+            </div>
+        </div>
+
+        <div class="main">
+            
+            <section class="aboutus">
+                <h3>Who we are</h3>
                 <p>There are no short cuts when it comes to our passion. We pull out all the stops, 
                 giving you the ‘wow’ flavour, experience and consistency you not only want, 
                 but deserve. Our customers keep coming back, again, again, and again.
@@ -74,18 +85,20 @@
             </section>
         
             <div class="container">
-                <p>Click here to watch how we make our awesome pizza's!</p>
-                <iframe name="PizzaVideo" title="PizzaVideo" src="https://www.youtube.com/embed/sv3TXMSv6Lw">
+                <p>Click here to watch how we make our awesome pizza!</p>
+                <iframe name="PizzaVideo" title="PizzaVideo" src="https://www.youtube.com/embed/sv3TXMSv6Lw" alt="How to make pizza video.">
                 </iframe>
             </div>
-            <div id="socialmedia">
+            <div class="socialmedia">
                 <p>Like us on Facebook!</p>
             </div>
-        </main>
-        <footer>
-            <a href="mailto:info@okotokspizza.ca">email:info@okotokspizza.ca</a>
-            <a href="phone:(403)555-5555">Phone:(403)555-5555</a>
-        </footer>
+        
+        <div class="footer">
+            <p> <a href="mailto:info@okotokspizza.ca">email:info@okotokspizza.ca</a></p>
+            <p><a href="phone:(403)555-5555">Phone:(403)555-5555</a></p>
+            <p><a href="#top">Back to top</a></p>
+        </div>
+    </div>
     </div>
 </body>
 </html>

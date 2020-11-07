@@ -2,228 +2,852 @@
     Modified October 24, 2020
     By Karen Evans*/
 
-    @import '_mixins.scss';
-    $font-color: black;
+@import '_mixins.scss';
+$font-color: black;
 
-    /* Mobile rules first */
-
-@media only screen and (min-width: 600px) {
-    #mobile-logo {
-        display:none;
-    }
-}
-
-/* Tablet media query rules */
-@media only screen and (min-width: 768px) {
-    .grid-wrapper{
-        display: grid; /*tells the browser to display in a grid layout*/
-        grid-template-columns: 100%;
-        grid-template-rows: 100px 1000px 10px;  
-        grid-template-areas:
-        'header'
-        'main'
-        'footer';
-        min-height: 100vh;
-    }
-}
-/* Desktop media query rules */
-@media only screen and (min-width: 1400px) {
-    .grid-wrapper{
-        display: grid; /*tells the browser to display in a grid layout*/
-        grid-template-columns: 100%;
-        grid-template-rows: 100px 800px 100px;  
-        grid-template-areas:
-        'header'
-        'main'
-        'footer';
-        min-height: 100vh;
-    }
-}
-
-
-*{
+  
+*   {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
     }
 
-body {
-        background: #024d1f;
-        color: $font-color;
-        font-family: 'Istok Web';
-        font-size: 1rem;
-    }
-
-header {
-        padding: 10px;
-        background-color: #AD1A12;
-        font-size: 70%;
-        color: $font-color;
-        text-align: center;
-        min-height: 100px;
-
-        img {
-            float: left;
-            }
-
-        nav {
-            float: right;
-            padding-bottom: 20px;
-            color: #8aff54;
-
-            ul {
-                list-style-type: none; /*Removes the bullets from the nav bar*/
-                overflow: hidden; /*added to prevent elements from going outside of the list*/
-            }
-
-            ul li {
-                float: left;
-            }
-
-            ul li a {
-                display: block; /*By default, <li> elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line */
-                color: #38ec15;
-                text-align: center;
-                padding: 10px;
-            }
-            }
-    
-        }
-
-
-  
-a {
-    /* unvisited link */
-    color: #e4ce0d;
-
-     /* visited link */
-    &:visited 
+body  
     {
-        color: #54FF95;
+        .grid-wrapper 
+            {
+                grid-area: 'grid-wrapper';
+                display: grid; /*tells the browser to display in a grid layout*/
+                grid-template-columns: 100%;
+                grid-template-rows: 400px 1fr;
+                // row-gap:10px;
+                grid-template-areas: 
+                    'header-grid'
+                    'main'
+                    'footer';
+                
+                background: #23856D;
+                color: black;
+                font-family: 'Istok Web';
+                font-size: 16px;
+                border-style: groove;
+                border-width: thick;
+                border-color: #006F57;
+                color: #BB010B;
+                min-height: 100vh;
+
+            .header-grid
+                {
+                    grid-area: 'header-grid';
+                    display: grid;
+                    grid-template-columns:1fr 1fr 1fr;
+                    grid-template-rows: 125px 125px 125px;
+                    grid-template-areas: 
+                    'area-1'
+                    'area-2'
+                    'area-3';
+        
+                    color: #BB010B;
+                   
+                    // row 1 and 2, column 1 logo
+                    .area-1
+                    {
+                        grid-area: 'area-1'; 
+                        grid-column-start: 1;
+                        grid-column-end: 1;
+                        grid-row-start: 1;
+                        grid-row-end: 2;
+                        padding: 20px;
+                        // padding-left: 20px;
+                        align-content: center;
+
+                        .logo
+                            {
+
+                                width: auto;
+                                height: auto;
+                            }
+
+                    }
+                
+                
+            
+                .area-2 // row 1, column 2 and 3 title
+                    {
+                        grid-area: 'area-2';
+                        grid-column-start: 2;
+                        grid-column-end: span 3;
+                        grid-row-start: 1;
+                        grid-row-end: 2;
+
+                        h1
+                        {
+                            padding: 10px;
+                            padding-top: 40px;
+                            padding-right: 25px;
+                            text-align: center;
+                            font-weight: bolder;
+                        }
+                        
+                    }
+
+                .area-3 // row 2 columns 2 and 3 navigation
+                    {
+                        grid-area: 'area-3';
+                        grid-column-start: 3;
+                        grid-column-end: 3;
+                        grid-row-start: 2;
+                        grid-row-end: 2;
+
+                        .navbar
+                        { 
+                            overflow: hidden; /*added to prevent elements from going outside of the list*/
+                            font-size: 10px;
+
+
+
+                        ul 
+                        {
+                        list-style-type: none; /*Removes the bullets from the nav bar*/
+                        // overflow: hidden; /*added to prevent elements from going outside of the list*/
+
+                        }
+
+                        ul li 
+                        {
+                            // float: left;
+                            font-size: 18px;
+                            color: #006F57;
+
+                        }
+
+                        ul li a 
+                        {
+                            display: block; /*By default, <li> elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line */
+                            
+                        }
+
+                        a /* unvisited link */
+                        {
+                            
+                            color: #006f57;
+                            
+                        }
+
+                        a:visited 
+                        {   
+                            /* visited link */
+                            color: #CD1624;
+                            font-size: 25px;
+                            font-weight: bolder;
+                        }
+
+                        a:active 
+                        {
+                            font-weight: bolder;
+                        }
+                        }
+                        
+                    }
+
+                .promobar //  columns 1, 2 and 3 row 3
+                    {
+
+                            grid-column-start: 1;
+                            grid-column-end: span 3;
+                            grid-row-start: 3;
+                            grid-row-end: 3;
+                            font-weight: bold;
+                            text-align: center;
+                            color: white;
+                            border-style: groove;
+                            border-color: #006f57;
+                            border-width: thick;
+                            background-image: url("../images/2for1.jpg");
+                            background-size: cover;
+                            background-repeat: no-repeat;
+
+                           
+                        }
+                }        
+
+
+            .main 
+                {
+                    grid-area: 'main';
+                    color:black;
+                    margin-bottom: 10px;
+                    text-align: left;
+                   
+        
+                    .aboutus 
+                        {
+                            height: 100%;
+                            margin: 10px;
+                            padding: 20px;
+                            border-style: groove;
+                            border-width: thick;
+                            border-color: darkgreen;
+                        }
+        
+                    p 
+                        {
+                            text-align: left;
+                        }
+        
+                    .container 
+                        {
+                            text-align: center;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            height: 400px;
+                            margin-top: 20px;
+                            padding: 1rem;
+                            // border-style: inset;
+                            background-color: #AD1A12;
+                            border-style: groove;
+                            border-width: thick;
+                            border-color: darkgreen;
+                            text-align: center;
+                    
+                            iframe 
+                                {
+                                    width: 75%;
+                                    display: inline;
+                                    -webkit-box-align: center;
+                                    -ms-flex-align: center;
+                                    align-items: center;
+                                    -o-object-fit: contain;
+                                    object-fit: contain;
+                                    padding: 10px;
+                                    height: 300px;
+                                }
+
+                            p 
+                                {
+                                    font-size: 25px;
+                                    text-align: center;
+                                }
+                        }
+
+        
+                    .socialmedia 
+                        {
+                            margin-top: 10px;
+                            vertical-align: middle;
+                            padding: 10px;
+                            background-color: black;
+                            color: red;
+                            font-size: 25px;
+                            font-weight: bold;
+                            border-style: groove;
+                            border-width: thick;
+                            border-color: darkgreen;
+
+                            p {
+
+                                text-align: left;
+                            }
+                        
+                        }
+               
+        
+                .footer 
+                    {
+                        grid-area:'footer';
+                        font-size: 10px;
+                        font-weight: bold;
+                        position: center;
+                        // align-items: center;
+                        vertical-align: middle;
+                        margin: 10px;
+                        padding: 5px;
+                        border-style: groove;
+                        border-width: thick;
+                        border-color: darkgreen;
+                    
+                        p {
+
+                            text-align: center;
+                        }
+                    }
+                }
+            }    
     }
 
-    &:active
-    {
-     font-weight: bold;
-    }
+@media only screen and (min-width: 300px) 
+{
+    #mobile-logo 
+         {
+                display: none;
+         }
 }
 
-main {  
-        margin-bottom: 10px;
-        text-align: left;
-        color:$font-color;
-        height: min-content;
-    }
-
-#promobar {
-        @include special-text();
-        background-color: white;
-        margin-top: 10px;
-        text-align: center;
-        height: 100px;
-    }
-
-#aboutus{
-    
-    height: 100%;
-    margin: 10px;
-}
-
-section p {
-    text-align: left;
-}
-
-.container
+@media only screen and (min-device-width: 320px) 
     {
-        text-align: center;
-        align-items: center;
-        height: 400px;
-        margin-top: 20px;
-        padding: 1rem;
-        border-style: inset;
-        background-color:#AD1A12;
-        border-color: rgb(3, 3, 3);
-        text-align: center;
-    }
+
+        body
+        { 
+        
+            .grid-wrapper 
+                {
+                    grid-area: 'grid-wrapper';
+                    display: grid; /*tells the browser to display in a grid layout*/
+                    grid-template-columns:100%;
+                    grid-template-rows: 400px 1fr;
+                    // row-gap:10px;
+                    grid-template-areas: 
+                        'header-grid'
+                        'main'
+                        'footer';
+                
+                    background: #23856D;
+                    color: black;
+                    font-family: 'Istok Web';
+                    border-style: groove;
+                    border-width: thick;
+                    border-color: #006F57;
+                    min-height: 100vh;
+
+                    .header-grid
+                        {
+                            grid-area: 'header-grid';
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            grid-template-rows: repeat(3, 125px);
+                            grid-template-areas: 
+                            'area-1'
+                            'area-2'
+                            'area-3';
+                    
+                            color: #BB010B;
+                            // border-style: groove;
+                            // border-width: thin;
+                            // border-color:#006F57;
+                            // min-height: fit-content;
+           
+                    
+
+                        // row 1 column 1 logo
+                        .area-1
+                        {
+                            grid-area: 'area-1'; 
+                            grid-column-start: 1;
+                            grid-column-end: 2;
+                            grid-row-start: 1;
+                            grid-row-end: 1;
+                            max-width: 106px;
+
+                        }
+                
+                
+            
+                    .area-2 // row 1, column 2 and 3 title
+                        {
+                            grid-area: 'area-2';
+                            grid-column-start: 2;
+                            grid-column-end: span;
+                            grid-row-start: 1;
+                            grid-row-end: 1;
+
+                            h1
+                            {
+                                padding: 10px;
+                                padding-top: 40px;
+                                padding-left: 25px;
+                                text-align: center;
+                                font-size: 1em;
+
+                            }
+                        
+                        }
+
+                    .area-3 // row 2 columns 2 and 3 navigation
+                        {
+                            grid-area: 'area-3';
+                            grid-column-start: 1;
+                            grid-column-end: span 3;
+                            grid-row-start: 2;
+                            grid-row-end: 2;
+                            // background-color: hotpink;
+                        
+
+                        .navbar
+                        { 
+                            overflow: hidden; /*added to prevent elements from going outside of the list*/
+                            font-size: 10px;
+                            padding: 5px;
+                        
+                        ul 
+                        {
+                        list-style-type: none; /*Removes the bullets from the nav bar*/
+                        // overflow: hidden; /*added to prevent elements from going outside of the list*/
+                        
+                        }
+                        
+                        ul li 
+                        {
+                            float: left;
+                            font-size: 18px;
+                            color: #006F57;
+                        
+                        }
+                        
+                        ul li a 
+                        {
+                            display: block; /*By default, <li> elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line */
+                            
+                        }
+                        
+                        a /* unvisited link */
+                        {
+                            
+                            color: #006f57;
+                            
+                        }
+                        
+                        a:visited 
+                        {   
+                            /* visited link */
+                            color: #CD1624;
+                            font-size: 25px;
+                            font-weight: bolder;
+                        }
+                        
+                        a:active 
+                        {
+                            font-weight: bolder;
+                        }
+                        }
+                    }                
+                    .promobar //  columns 1, 2 and 3 row 3
+                        {
+                            
+                            grid-column-start: 1;
+                            grid-column-end: span 3;
+                            grid-row-start: 3;
+                            grid-row-end: 3;
+                            font-weight: bold;
+                            text-align: center;
+                            color: white;
+                            border-style: groove;
+                            border-color: #006f57;
+                            border-width: thick;
+                            background-image: url("../images/2for1.jpg");
+                            background-size: cover;
+                            background-repeat: no-repeat;
+
+                        }
+                }
+                
+
+            .main 
+                {
+                    grid-area: 'main';
+                    color:black;
+                    margin-bottom: 10px;
+                    text-align: left;
+                    // height: min-content;
+                   
+               
+        
+                    .aboutus 
+                        {
+                            height: 100%;
+                            margin: 10px;
+                            padding: 20px;
+                            border-style: groove;
+                            border-width: thick;
+                            border-color: darkgreen;
+                        }
+        
+                    p 
+                        {
+                            text-align: left;
+                        }
+        
+                    .container 
+                        {
+                            text-align: center;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            height: 400px;
+                            margin-top: 20px;
+                            padding: 1rem;
+                            // border-style: inset;
+                            background-color: #AD1A12;
+                            border-style: groove;
+                            border-width: thick;
+                            border-color: darkgreen;
+                            text-align: center;
+                    
+                            iframe 
+                                {
+                                    width: 75%;
+                                    display: inline;
+                                    -webkit-box-align: center;
+                                    -ms-flex-align: center;
+                                    align-items: center;
+                                    -o-object-fit: contain;
+                                    object-fit: contain;
+                                    padding: 10px;
+                                    height: 300px;
+                                }
+
+                            p 
+                                {
+                                    font-size: 25px;
+                                    text-align: center;
+                                }
+                        }
+
+        
+                    .socialmedia 
+                        {
+                            margin-top: 10px;
+                            vertical-align: middle;
+                            padding: 10px;
+                            background-color: black;
+                            color: red;
+                            font-size: 25px;
+                            font-weight: bold;
+                            border-style: groove;
+                            border-width: thick;
+                            border-color: darkgreen;
+
+                            p {
+
+                                text-align: left;
+                            }
+                        
+                        }
+               
+        
+                .footer 
+                    {
+                        grid-area:'footer';
+                        font-size: 10px;
+                        font-weight: bold;
+                        position: center;
+                        // align-items: center;
+                        vertical-align: middle;
+                        margin: 10px;
+                        padding: 5px;
+                        border-style: groove;
+                        border-width: thick;
+                        border-color: darkgreen;
+                    
+                        p {
+
+                            text-align: center;
+                        }
+                    }
+                }
+        }   }    
+    } 
+
+
+
+
+/* Tablet media query rules */
+@media only screen and (min-width: 768px) 
+{
+    body
+    { 
+        
+    .grid-wrapper 
+        {
+            grid-area: 'grid-wrapper';
+            display: grid; /*tells the browser to display in a grid layout*/
+            grid-template-columns:100%;
+            grid-template-rows: 400px 1fr;
+            // row-gap:10px;
+            grid-template-areas: 
+                'header-grid'
+                'main'
+                'footer';
+        
+            background: #23856D;
+            color: black;
+            font-family: 'Istok Web';
+            border-style: groove;
+            border-width: thick;
+            border-color: #006F57;
+            min-height: 100vh;
+
+            .header-grid
+                {
+                    grid-area: 'header-grid';
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(3, 125px);
+                    grid-template-areas: 
+                    'area-1'
+                    'area-2'
+                    'area-3';
+            
+                    color: #BB010B;
+                    // border-style: groove;
+                    // border-width: thin;
+                    // border-color:#006F57;
+                    // min-height: fit-content;
    
+            
 
-iframe {
-        width: 75%;
-        display: inline;
-        align-items: center;
-        object-fit: contain;
-        padding: 10px;
-        height: 300px;
-    }
+                // row 1 column 1 logo
+                .area-1
+                {
+                    grid-area: 'area-1'; 
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 1;
+                    grid-row-end: 1;
+                    max-width: 106px;
 
-
-#socialmedia {
- 
-        margin-top: 10px;
-        vertical-align: middle;
-        padding: 10px;
-        background-color: #54FF95;
-        height: min-content;
-    }
+                }
+        
+        
     
-footer
-    {
-        height: min-content;
-        vertical-align: middle;
-        text-align: center;
-        color: $font-color;
-        size: 5px;
-        margin-bottom: 10px;
-    }
-// menupage style rules 
+            .area-2 // row 1, column 2 and 3 title
+                {
+                    grid-area: 'area-2';
+                    grid-column-start: 2;
+                    grid-column-end: span;
+                    grid-row-start: 1;
+                    grid-row-end: 1;
 
-// div.food-menu ul
-// {
-//     background-color: pink
-// }
-/* Style The Dropdown Button */
-.dropbtn {
-    background-color: #058609;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
+                    h1
+                    {
+                        padding: 10px;
+                        padding-top: 40px;
+                        padding-left: 25px;
+                        text-align: center;
+                        font-size: 1em;
+                        
+
+                    }
+                
+                }
+
+            .area-3 // row 2 columns 2 and 3 navigation
+                {
+                    grid-area: 'area-3';
+                    grid-column-start: 1;
+                    grid-column-end: span 3;
+                    grid-row-start: 2;
+                    grid-row-end: 2;
+                 }
+           
+        
+            .promobar //  columns 1, 2 and 3 row 3
+                {
+                    
+                    grid-column-start: 1;
+                    grid-column-end: span 3;
+                    grid-row-start: 3;
+                    grid-row-end: 3;
+                    font-weight: bold;
+                    text-align: center;
+                    color: white;
+                    border-style: groove;
+                    border-color: #006f57;
+                    border-width: thick;
+                    background-image: url("../images/2for1.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                }
+        }        
+
+    .main 
+        {
+            grid-area: 'main';
+            color:black;
+            margin-bottom: 10px;
+            text-align: left;
+            // height: min-content;
+           
+       
+
+            .aboutus 
+                {
+                    height: 100%;
+                    margin: 10px;
+                    padding: 20px;
+                    border-style: groove;
+                    border-width: thick;
+                    border-color: darkgreen;
+                }
+
+            p 
+                {
+                    text-align: left;
+                }
+
+            .container 
+                {
+                    text-align: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    height: 400px;
+                    margin-top: 20px;
+                    padding: 1rem;
+                    // border-style: inset;
+                    background-color: #AD1A12;
+                    border-style: groove;
+                    border-width: thick;
+                    border-color: darkgreen;
+                    text-align: center;
+            
+                    iframe 
+                        {
+                            width: 75%;
+                            display: inline;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            -o-object-fit: contain;
+                            object-fit: contain;
+                            padding: 10px;
+                            height: 300px;
+                        }
+
+                    p 
+                        {
+                            font-size: 25px;
+                            text-align: center;
+                        }
+                }
+
+
+            .socialmedia 
+                {
+                    margin-top: 10px;
+                    vertical-align: middle;
+                    padding: 10px;
+                    background-color: black;
+                    color: red;
+                    font-size: 25px;
+                    font-weight: bold;
+                    border-style: groove;
+                    border-width: thick;
+                    border-color: darkgreen;
+
+                    p {
+
+                        text-align: left;
+                    }
+                
+                }
+       
+
+        .footer 
+            {
+                grid-area:'footer';
+                font-size: 10px;
+                font-weight: bold;
+                position: center;
+                // align-items: center;
+                vertical-align: middle;
+                margin: 10px;
+                padding: 5px;
+                border-style: groove;
+                border-width: thick;
+                border-color: darkgreen;
+            
+                p {
+
+                    text-align: center;
+                }
+            }
+        }
+}   }    
+} 
+
+
+
+
+// // .navbar {
+// //     overflow: hidden;
+// // //   background-color: #006F57;  
+// //   position: relative;
+// // //   bottom: 0;
+// //   width: 100%;
+// // }
+// // .navbar a {
+// //     float: right;
+// //     display: block;
+// //     color: #f2f2f2;
+// //     text-align: center;
+// //     padding: 14px 16px;
+// //     text-decoration: none;
+// //     font-size: 17px;
+// //   }
   
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: relative;
-    height: 100px;
-    background-color: #f9f9f9;
-    min-width: 600px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-top: 0px;
-  }
+// //   .navbar a:hover {
+// //     background-color: #ddd;
+// //     color: black;
+// //   }
   
+// //   .navbar a.active {
+// //     background-color: #4CAF50;
+// //     color: white;
+// //   }
+// //   .navbar .icon {
+// //     display: none;
+// //   }
+// // }
 
-  /* Change color of dropdown links on hover */
-  .dropdown-content:hover {
-    background-color: teal;
-  }
+// /* Style The Dropdown Button on the pizza Menu page*/
+// .dropbtn 
+//     {
+//         background-color: #058609;
+//         color: white;
+//         padding: 16px;
+//         font-size: 16px;
+//         border: none;
+//         cursor: pointer;
+//     }
   
-
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+// /* The container <div> - needed to position the dropdown content */
+// // .dropdown 
+// //     {
+// //         position: relative;
+// //         display: inline-block;
+// //     }
   
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  } 
-
+// //   /* Dropdown Content (Hidden by Default) */
+// // .dropdown-content 
+// //     {
+// //         display: none;
+// //         position: relative;
+// //         height: 100px;
+// //         background-color: #f9f9f9;
+// //         min-width: 600px;
+// //         -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+// //         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+// //         z-index: 1;
+// //         margin-top: 0px;
+// //     }
+  
+// // /* Change color of dropdown links on hover */
+// // .dropdown-content:hover 
+// //     {
+// //         background-color: teal;
+// //     }
+  
+// // /* Show the dropdown menu on hover */
+// // .dropdown:hover .dropdown-content 
+// //     {
+// //         display: block;
+// //     }
+  
+// // /* Change the background color of the dropdown button when the dropdown content is shown */
+// // .dropdown:hover .dropbtn 
+// //     {
+// //         background-color: #3e8e41;
+// //     }
+// //   /*# sourceMappingURL=style.css.map */
