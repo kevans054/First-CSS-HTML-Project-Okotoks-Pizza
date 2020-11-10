@@ -1,5 +1,6 @@
-@mixin special-text() {
-    color: red;
-    font-size: 25px;
-    font-weight: bold;
+@mixin branding() {
+$fontcolor: rgb(205, 1, 1);
+$border: #23856d;
+$tanbackground: rgb(214, 189, 148);
+$redbackground: rgb(165, 24, 24);
 }

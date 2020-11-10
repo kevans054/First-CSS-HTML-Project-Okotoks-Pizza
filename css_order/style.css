@@ -1,5 +1,5 @@
-/*  Assignment W4B Okoktoks Pizza Homepage Style Sheet
-    Modified October 24, 2020
+/*  Assignment W4B Okoktoks Pizza Order Style Sheet
+    created November 09, 2020
     By Karen Evans*/
 * {
   -webkit-box-sizing: border-box;
@@ -15,7 +15,7 @@
 }
 
 @media only screen and (min-width: 320px) {
-  .grid-wrapper {
+  .Order-grid {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 100%;
@@ -29,7 +29,7 @@
     border-width: 10px;
     border-color: goldenrod;
   }
-  .grid-wrapper > header {
+  .Order-grid > header {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 320px;
@@ -38,7 +38,7 @@
         grid-template-rows: 50px 400px 400px;
     padding-top: 50px;
   }
-  .grid-wrapper > header .navbar {
+  .Order-grid > header .navbar {
     -ms-grid-column-align: start;
         justify-self: start;
     position: relative;
@@ -46,7 +46,7 @@
     color: black;
     background: #d6bd94;
   }
-  .grid-wrapper > header .navbar .menu {
+  .Order-grid > header .navbar .menu {
     position: fixed;
     top: 100px;
     left: 0px;
@@ -61,11 +61,11 @@
     transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
     list-style-type: none;
   }
-  .grid-wrapper > header .navbar .fa-bars {
+  .Order-grid > header .navbar .fa-bars {
     font-size: 2rem;
     color: #cd0101;
   }
-  .grid-wrapper > header .navbar .hamburger-button {
+  .Order-grid > header .navbar .hamburger-button {
     position: absolute;
     top: 0;
     right: 0;
@@ -74,23 +74,23 @@
     opacity: 0;
     cursor: default;
   }
-  .grid-wrapper > header .navbar .hamburger-button:checked ~ .menu {
+  .Order-grid > header .navbar .hamburger-button:checked ~ .menu {
     -webkit-transform: none;
             transform: none;
   }
-  .grid-wrapper > header .navbar .hamburger-button:checked ~ .fa-bars:before {
+  .Order-grid > header .navbar .hamburger-button:checked ~ .fa-bars:before {
     content: "\f00d";
   }
-  .grid-wrapper > header .logo {
+  .Order-grid > header .logo {
     width: 100%;
     height: auto;
   }
-  .grid-wrapper > header .logo > h3 {
+  .Order-grid > header .logo > h3 {
     color: #a51818;
     padding-top: 20px;
     text-align: center;
   }
-  .grid-wrapper .promo {
+  .Order-grid .promo {
     position: relative;
     padding-top: 50px;
     padding-right: 25px;
@@ -98,61 +98,40 @@
     text-align: center;
     color: #a51818;
   }
-  .grid-wrapper .promo > img {
+  .Order-grid .promo > img {
     width: 100%;
     height: auto;
   }
-  .grid-wrapper .promo > h3 {
+  .Order-grid .promo > h3 {
     padding-top: 140px;
   }
-  .grid-wrapper > main .aboutus {
-    margin: 10px;
-    text-align: left;
-    background-color: #a51818;
-    border-style: groove;
-    border-width: thick;
-    border-color: darkgreen;
-    width: 100%;
-    height: auto;
+  .Order-grid .food-menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    background-color: white;
+    grid-gap: 0.25rem;
   }
-  .grid-wrapper > main .aboutus > h1 {
+  .Order-grid .food-menu > div {
+    color: white;
+  }
+  .Order-grid .food-menu > div > h1 {
+    color: black;
     text-align: center;
-    padding-bottom: 10px;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 2;
   }
-  .grid-wrapper > main .aboutus p {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px;
+  .Order-grid .food-menu > .item {
+    background-color: #d6bd94;
   }
-  .grid-wrapper > main .container {
-    text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 400px;
-    margin: 10px;
-    padding: 1rem;
-    background-color: #a51818;
-    border-style: groove;
-    border-width: thick;
-    border-color: darkgreen;
+  .Order-grid .food-menu > .item > .image {
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
   }
-  .grid-wrapper > main .container iframe {
-    width: 75%;
-    display: inline;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -o-object-fit: contain;
-       object-fit: contain;
-    padding: 10px;
-    height: 300px;
-  }
-  .grid-wrapper > main .container p {
-    font-size: 25px;
-    text-align: center;
-  }
-  .grid-wrapper > footer {
+  .Order-grid > footer {
     font-size: 20px;
     font-weight: bold;
     position: -webkit-sticky;
@@ -164,7 +143,7 @@
     border-color: darkgreen;
     text-align: center;
   }
-  .grid-wrapper > footer .socialmedia {
+  .Order-grid > footer .socialmedia {
     margin-top: 10px;
     vertical-align: middle;
     height: 70px;
@@ -172,10 +151,10 @@
     border-width: thick;
     border-color: darkgreen;
   }
-  .grid-wrapper > footer .contact > p {
+  .Order-grid > footer .contact > p {
     padding: 2px;
   }
-  .grid-wrapper > footer .contact > div > p {
+  .Order-grid > footer .contact > div > p {
     font-size: 10px;
     text-align: left;
     padding-top: 25px;
@@ -183,13 +162,13 @@
 }
 
 @media only screen and (min-width: 320px) and (min-width: 991px) {
-  .grid-wrapper {
+  .Order-grid {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 400px 1fr 200px;
-        grid-template-rows: 400px 1fr 200px;
+    -ms-grid-rows: 500px 1fr 200px;
+        grid-template-rows: 500px 1fr 200px;
     min-height: 100vh;
     background-color: #d6bd94;
     font-family: "Intro";
@@ -197,42 +176,43 @@
     border-width: 10px;
     border-color: goldenrod;
   }
-  .grid-wrapper > header {
+  .Order-grid > header {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 50px 50% 50%;
         grid-template-columns: 50px 50% 50%;
+    -ms-grid-rows: 50px 400px 400px;
+        grid-template-rows: 50px 400px 400px;
     padding-top: 50px;
   }
-  .grid-wrapper > header .navbar {
+  .Order-grid > header .navbar {
     -ms-grid-column-align: start;
         justify-self: start;
     position: relative;
-    font-size: 30px;
+    font-size: 18px;
     color: black;
     background: #d6bd94;
   }
-  .grid-wrapper > header .navbar .menu {
+  .Order-grid > header .navbar .menu {
     position: fixed;
     top: 100px;
     left: 0px;
     background-color: #d6bd94;
     width: 100px;
     height: 100px;
-    -webkit-transform: translateX(-150%);
-            transform: translateX(-150%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
     -webkit-transition: -webkit-transform 0.2s ease-in-out;
     transition: -webkit-transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
     list-style-type: none;
-    font-size: 40px;
   }
-  .grid-wrapper > header .navbar .fa-bars {
-    font-size: 4rem;
+  .Order-grid > header .navbar .fa-bars {
+    font-size: 2rem;
     color: #cd0101;
   }
-  .grid-wrapper > header .navbar .hamburger-button {
+  .Order-grid > header .navbar .hamburger-button {
     position: absolute;
     top: 0;
     right: 0;
@@ -241,88 +221,64 @@
     opacity: 0;
     cursor: default;
   }
-  .grid-wrapper > header .navbar .hamburger-button:checked ~ .menu {
+  .Order-grid > header .navbar .hamburger-button:checked ~ .menu {
     -webkit-transform: none;
             transform: none;
   }
-  .grid-wrapper > header .navbar .hamburger-button:checked ~ .fa-bars:before {
+  .Order-grid > header .navbar .hamburger-button:checked ~ .fa-bars:before {
     content: "\f00d";
   }
-  .grid-wrapper > header .logo > img {
+  .Order-grid > header .logo {
     width: 100%;
     height: auto;
   }
-  .grid-wrapper > header .logo > h3 {
+  .Order-grid > header .logo > h3 {
     color: #a51818;
     padding-top: 20px;
-    font-size: 2rem;
+    text-align: center;
   }
-  .grid-wrapper .promo {
+  .Order-grid .promo {
     position: relative;
     padding-top: 50px;
     padding-right: 25px;
     font-weight: bolder;
-    font-size: 32px;
     text-align: center;
     color: #a51818;
   }
-  .grid-wrapper .promo > img {
-    width: 200px;
-    height: auto;
-  }
-  .grid-wrapper .promo > h3 {
-    padding-top: 140px;
-  }
-  .grid-wrapper > main .aboutus {
-    margin: 10px;
-    text-align: left;
-    background-color: #a51818;
-    border-style: groove;
-    border-width: thick;
-    border-color: darkgreen;
+  .Order-grid .promo > img {
     width: 100%;
     height: auto;
   }
-  .grid-wrapper > main .aboutus > h1 {
+  .Order-grid .promo > h3 {
+    padding-top: 140px;
+  }
+  .Order-grid .food-menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    background-color: white;
+    grid-gap: 0.25rem;
+  }
+  .Order-grid .food-menu > div {
+    color: white;
+  }
+  .Order-grid .food-menu > div > h1 {
+    color: black;
     text-align: center;
-    font-size: 3rem;
-    padding-bottom: 10px;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 2;
   }
-  .grid-wrapper > main .aboutus p {
-    text-align: left;
-    font-size: 30px;
-    font-weight: bold;
-    padding: 5px;
+  .Order-grid .food-menu > .item {
+    background-color: #d6bd94;
   }
-  .grid-wrapper > main .container {
-    text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 400px;
-    margin: 10px;
-    padding: 1rem;
-    background-color: #a51818;
-    border-style: groove;
-    border-width: thick;
-    border-color: darkgreen;
+  .Order-grid .food-menu > .item > .image {
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
   }
-  .grid-wrapper > main .container iframe {
-    width: 75%;
-    display: inline;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -o-object-fit: contain;
-       object-fit: contain;
-    padding: 10px;
-    height: 300px;
-  }
-  .grid-wrapper > main .container p {
-    font-size: 40px;
-    text-align: center;
-  }
-  .grid-wrapper > footer {
+  .Order-grid > footer {
     font-size: 20px;
     font-weight: bold;
     position: -webkit-sticky;
@@ -334,7 +290,7 @@
     border-color: darkgreen;
     text-align: center;
   }
-  .grid-wrapper > footer .socialmedia {
+  .Order-grid > footer .socialmedia {
     margin-top: 10px;
     vertical-align: middle;
     height: 70px;
@@ -342,11 +298,11 @@
     border-width: thick;
     border-color: darkgreen;
   }
-  .grid-wrapper > footer .contact > p {
+  .Order-grid > footer .contact > p {
     padding: 2px;
   }
-  .grid-wrapper > footer .contact > div > p {
-    font-size: 20px;
+  .Order-grid > footer .contact > div > p {
+    font-size: 10px;
     text-align: left;
     padding-top: 25px;
   }
